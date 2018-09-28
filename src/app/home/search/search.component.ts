@@ -39,7 +39,7 @@ export class SearchComponent implements OnInit {
     };
 
     //this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
-     this.http.get(this.LIVE_URI+"/search?q="+this.location, httpOptions).subscribe(res => {
+     this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, httpOptions).subscribe(res => {
       console.log(res)});
 
   }
