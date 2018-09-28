@@ -9,7 +9,8 @@ export class Service1Service {
 
   LIVE_URI= "https://developers.zomato.com/api/v2.1";
 
-
+  location:string;
+  cuisine: string;
   constructor(private http: HttpClient) {
 
    }
@@ -24,6 +25,7 @@ export class Service1Service {
       })
     };
 
-    return this.http.get('https://developers.zomato.com/api/v2.1/search', httpOptions);
+    //return this.http.get('https://developers.zomato.com/api/v2.1/search?q=location&cuisines=cuisine', httpOptions);
+    //this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
 }
 }

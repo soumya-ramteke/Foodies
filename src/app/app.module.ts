@@ -8,6 +8,7 @@ import { HeaderComponent } from './home/header/header.component';
 import { SearchComponent } from './home/search/search.component';
 import { Service1Service } from './service1.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [Service1Service],
   bootstrap: [AppComponent]
