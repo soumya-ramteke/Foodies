@@ -1,0 +1,18 @@
+.form{
+    width: 500px;
+    margin: auto;
+}
+.button{
+    width: 60px;
+    margin: auto;
+}
+
+.resultsContainer {
+    display: flex;
+   flex-wrap: wrap;
+   
+}
+
+body{
+    width: 100%;
+}

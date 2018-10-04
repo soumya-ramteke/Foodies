@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +13,8 @@
 <div class="container">
   <form>
     <div class="form-group">
-      <label for="restaurant">Restaurant/Location:</label>
-      <input type="text" class="form-control" id="restaurant" name="restaurant" >
+      <label for="location">Restaurant/Location:</label>
+      <input type="text" class="form-control" id="location" name="location" [(ngModel)]="location">
     </div>
     <div class="form-group">
       <label for="cuisine">Cuisine:</label>
@@ -26,7 +25,9 @@
 </div>
 
 
-<!-- <div class="card" *ngIf="res"> -->
+
+<!-- <div class="card" *ngIf="res"> 
+  <div class="resultsContainer">
   <div class="row" *ngFor="let res1 of res">
     <div class="card">
       <div class="card-body">
@@ -38,7 +39,32 @@
       </div>
     </div>
   </div>
-<!-- </div> -->
+  </div>
+
+ -->
+
+
+
+ <div class="resultsContainer">
+          <div class="row" *ngFor="let res1 of res">
+              <div class="card" style="width: 100%;">
+                <div class="card-body">
+                  
+                  <img src="{{res1.featured_image}}" alt="" style="width:200px;height:200px;">
+                  <h5 class="card-title" style="width:300%">{{res1.name}} </h5>
+                  <a routerLink="/collection" routerLinkActive="active" class="btn btn-primary" (click)="sendDatato(res1)">Add to collection</a>
+                  <!--<a  class="btn btn-primary" (click)="sendData(res1)">Add to existing collections</a><br><br>
+                  <a  class="btn btn-primary" (click)="sendDatato(res1)">Add to new collections</a> -->
+                </div>
+              </div>
+            </div>
+       </div>
+      
 
 </body>
 </html>
+
+
+
+
+

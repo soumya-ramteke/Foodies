@@ -1,3 +1,17 @@
-<p>
-  collection works!
-</p>
+<body>
+   
+    <button (click)="showCollectionsfav()">Show favourite Collections</button><br><br>
+    <br>
+    <div class="cards">
+    
+      <div class="row" *ngFor="let rest of restaurants">
+        <!-- <div>This is resturant: {{resturant}}</div> -->
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <img src="{{rest.featured_image}}" style="width:200px;height:200px;">
+            <h5 class="card-title" style="width:500%">{{rest.name}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
