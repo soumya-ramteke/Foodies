@@ -9,13 +9,15 @@ import { SearchComponent } from './home/search/search.component';
 import { Service1Service } from './service1.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,

@@ -32,7 +32,9 @@
       <div class="card-body">
         <img src="{{res1.featured_image}}">
         <h5 class="card-title">{{res1.name}}</h5>
-        <a href="#" class="btn btn-primary">Add to collection</a>
+        <a routerLink="/collection" routerLinkActive="active" class="btn btn-primary">Add to collection</a>
+        <a  class="btn btn-primary" (click)="sendData(res1)">Add to existing collection</a>
+             <a  class="btn btn-primary" (click)="sendDatato(res1)">Add to new collection</a>
       </div>
     </div>
   </div>

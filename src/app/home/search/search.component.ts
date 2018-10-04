@@ -46,7 +46,33 @@ export class SearchComponent implements OnInit {
       this.res = val.restaurants.map(e => {
         return e.restaurant
       })
-    })
+    });
+}
 
-  }
+sendData(res1:any){
+  const httpOptions={
+    headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'user-key': '5ab37ea4bd46c8144a9dc0ac84312024'
+  })
+}
+
+this.http.post("http://localhost:3000/posts",res1).subscribe(data=>{
+  console.log("POST is successful");
+}
+);
+}
+
+sendDatato(res1:any){
+  const httpOptions={
+    headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'user-key': '5ab37ea4bd46c8144a9dc0ac84312024'
+  })
+}
+this.http.post("http://localhost:3000/favourites",res1).subscribe(data=>{
+  console.log("POST is successful");
+}
+);
+ }
 }
