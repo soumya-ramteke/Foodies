@@ -11,7 +11,7 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  res: any;
   location:string;
  cuisine:string;
  LIVE_URI= "https://developers.zomato.com/api/v2.1";
@@ -39,8 +39,14 @@ export class SearchComponent implements OnInit {
     };
 
     //this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
-     this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, httpOptions).subscribe(res => {
-      console.log(res)});
+     /*this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, httpOptions).subscribe(res => {
+      console.log(res)}); */
+      this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, 
+    httpOptions).subscribe((val: any) => {
+      this.res = val.restaurants.map(e => {
+        return e.restaurant
+      })
+    })
 
   }
 }

@@ -14,12 +14,8 @@
 <div class="container">
   <form>
     <div class="form-group">
-      <label for="restaurant">Restaurant:</label>
+      <label for="restaurant">Restaurant/Location:</label>
       <input type="text" class="form-control" id="restaurant" name="restaurant" >
-    </div>
-    <div class="form-group">
-      <label for="location">Location:</label>
-      <input type="text" class="form-control" id="location" name="location" [(ngModel)]="location">
     </div>
     <div class="form-group">
       <label for="cuisine">Cuisine:</label>
@@ -28,5 +24,19 @@
   </form>
   <button type="submit" class="btn btn-default" (click)="random()" >Submit</button>
 </div>
+
+
+<!-- <div class="card" *ngIf="res"> -->
+  <div class="row" *ngFor="let res1 of res">
+    <div class="card">
+      <div class="card-body">
+        <img src="{{res1.featured_image}}">
+        <h5 class="card-title">{{res1.name}}</h5>
+        <a href="#" class="btn btn-primary">Add to collection</a>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+
 </body>
 </html>
