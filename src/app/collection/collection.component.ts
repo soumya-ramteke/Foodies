@@ -9,16 +9,14 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrls: ['./collection.component.css']
 })
 export class CollectionComponent implements OnInit {
-  
+  res: any = [ ];
+  restaurants = [ ];
+
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-  }
-  res:any=[];
-  restaurants=[];
+  ngOnInit() { }
 
-showCollectionsfav()
-{
+showCollectionsfav() {
   console.log('called showfavouriteCollections');
   const httpOptions = {
     headers: new HttpHeaders({
@@ -26,11 +24,11 @@ showCollectionsfav()
       'user-key': '5ab37ea4bd46c8144a9dc0ac84312024'
     })
   };
-  
-    this.http.get("http://localhost:3000/favourites").subscribe((res: any) => {
+
+  this.http.get('http://localhost:3000/favourites').subscribe((res: any) => {
     this.restaurants = res;
     console.log(this.restaurants);
-    })
+    });
 
 }
 }

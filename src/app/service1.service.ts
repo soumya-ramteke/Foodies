@@ -7,16 +7,13 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class Service1Service {
 
-  LIVE_URI= "https://developers.zomato.com/api/v2.1";
+  LIVE_URI = 'https://developers.zomato.com/api/v2.1';
 
-  location:string;
+  location: string;
   cuisine: string;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { }
 
-   }
-
-   getRestaurants()
-   {
+   getRestaurants() {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -25,7 +22,7 @@ export class Service1Service {
       })
     };
 
-    //return this.http.get('https://developers.zomato.com/api/v2.1/search?q=location&cuisines=cuisine', httpOptions);
-    //this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
+    // return this.http.get('https://developers.zomato.com/api/v2.1/search?q=location&cuisines=cuisine', httpOptions);
+    // this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
 }
 }

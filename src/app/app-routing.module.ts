@@ -4,7 +4,7 @@ import {HomeComponent} from './home/home.component';
 import { CollectionComponent } from './collection/collection.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'collection', component: CollectionComponent}
 
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[CollectionComponent];
+export const routingComponents = [CollectionComponent];
