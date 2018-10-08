@@ -25,7 +25,6 @@
 </div>
 
 
-
 <!-- <div class="card" *ngIf="res"> 
   <div class="resultsContainer">
   <div class="row" *ngFor="let res1 of res">
@@ -52,17 +51,32 @@
                   
                   <img src="{{res1.featured_image}}" alt="" style="width:200px;height:200px;">
                   <h5 class="card-title" style="width:300%">{{res1.name}} </h5>
-                  <a routerLink="/collection" routerLinkActive="active" class="btn btn-primary" (click)="sendDatato(res1)">Add to collection</a>
-                  <!--<a  class="btn btn-primary" (click)="sendData(res1)">Add to existing collections</a><br><br>
-                  <a  class="btn btn-primary" (click)="sendDatato(res1)">Add to new collections</a> -->
+                  <a routerLink="/collection" routerLinkActive="active" class="btn btn-primary" (click)="SendDatato1(res1)">Add to collection</a>
                 </div>
               </div>
             </div>
        </div>
+
+        <!--
+       <div class="resultsContainer">
+       <div class="row" *ngFor="let res1 of res">
+       <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{res1.featured_image}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{res1.name}}</h4>
+          
+          <a routerLink="/collection" routerLinkActive="active" class="btn btn-primary" (click)="sendDatato(res1)">Add to collection</a>
+          </div>
+          </div>
+          </div>
+        </div>
+      -->
       
 
 </body>
 </html>
+
+
 
 
 

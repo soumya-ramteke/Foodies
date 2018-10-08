@@ -16,8 +16,8 @@ export class SearchComponent implements OnInit {
   cuisine: string;
   LIVE_URI = 'https://developers.zomato.com/api/v2.1';
 
- /* constructor(private some_name: Service1Service) {  }*/
-    constructor(private http: HttpClient) { }
+  constructor(private some_name: Service1Service) {  }
+    // constructor(private http: HttpClient) { }
 
   ngOnInit() { }
 
@@ -37,13 +37,13 @@ export class SearchComponent implements OnInit {
     // this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
     /* this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, httpOptions).subscribe(res => {
       console.log(res)}); */
-      this.http.get(this.LIVE_URI + '/search?q=' + this.location + '&cuisines=' + this.cuisine, httpOptions).subscribe((val: any) => {
+     this.some_name.getRestaurants(this.location,this.cuisine).subscribe((val: any) => {
       this.res = val.restaurants.map(e => {
         return e.restaurant;
       });
     });
 }
-
+/*
 sendData(res1: any) {
   const httpOptions = {
     headers: new HttpHeaders({
@@ -56,9 +56,9 @@ this.http.post('http://localhost:3000/posts', res1).subscribe( data => {
   console.log('POST is successful');
 }
 );
-}
+}*/
 
-sendDatato(res1: any) {
+/*sendDatato(res1: any) {
   const httpOptions = {
     headers: new HttpHeaders({
     'Content-Type':  'application/json',
@@ -69,5 +69,8 @@ this.http.post('http://localhost:3000/favourites' , res1).subscribe( data => {
   console.log('POST is successful');
 }
 );
+ }*/
+ SendDatato1(res1:any){
+   this.some_name.sendDatato(res1);
  }
 }
