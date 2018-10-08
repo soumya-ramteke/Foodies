@@ -37,7 +37,7 @@ export class SearchComponent implements OnInit {
     // this.http.get(this.LIVE_URI+"/search?q="+this.location,httpOptions);
     /* this.http.get(this.LIVE_URI+"/search?q="+this.location+"&cuisines="+this.cuisine, httpOptions).subscribe(res => {
       console.log(res)}); */
-     this.some_name.getRestaurants(this.location,this.cuisine).subscribe((val: any) => {
+     this.some_name.getRestaurants(this.location, this.cuisine).subscribe((val: any) => {
       this.res = val.restaurants.map(e => {
         return e.restaurant;
       });
@@ -70,7 +70,7 @@ this.http.post('http://localhost:3000/favourites' , res1).subscribe( data => {
 }
 );
  }*/
- SendDatato1(res1:any){
+ SendDatato1(res1: any) {
    this.some_name.sendDatato(res1);
  }
 }

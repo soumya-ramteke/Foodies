@@ -13,7 +13,7 @@ export class Service1Service {
   // cuisine: string;
   constructor(private http: HttpClient) { }
 
-   getRestaurants(location:string, cuisine:string) {
+   getRestaurants(location: string, cuisine: string) {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -36,7 +36,7 @@ sendDatato(res1: any) {
     'user-key': '5ab37ea4bd46c8144a9dc0ac84312024'
   })
 };
-this.http.post('http://localhost:3000/favourites' , res1).subscribe( data => {
+ this.http.post('http://localhost:3000/favourites' , res1).subscribe( data => {
   console.log('POST is successful');
 }
 );
