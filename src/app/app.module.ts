@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
-import { Service1Service } from './service1.service';
+import { GetRestaurantService } from './get-restaurant.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CollectionComponent } from './collection/collection.component';
@@ -25,7 +25,7 @@ import { CollectionComponent } from './collection/collection.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [Service1Service],
+  providers: [GetRestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

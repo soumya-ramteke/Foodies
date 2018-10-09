@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Service1Service } from '../service1.service';
+import { GetRestaurantService } from '../get-restaurant.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   cuisine: string;
   LIVE_URI = 'https://developers.zomato.com/api/v2.1';
 
-  constructor(private some_name: Service1Service) {  }
+  constructor(private some_name: GetRestaurantService) {  }
     // constructor(private http: HttpClient) { }
 
   ngOnInit() { }
