@@ -31,4 +31,13 @@ showCollectionsfav() {
     });
 
 }
+
+deleteData(res1:any){
+
+  this.http.delete('http://localhost:3000/favourites/' + res1.id).subscribe(
+     data => {
+     console.log('DELETE Request is successful');
+    }
+     );
+}
 }
